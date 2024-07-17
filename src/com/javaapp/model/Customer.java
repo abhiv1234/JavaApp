@@ -4,12 +4,17 @@ import com.javaapp.enums.AccountType;
 
 public class Customer extends BaseEntity {
 
+//	customer is getting id from BaseEntity along with getter setter
+//	instance variables (belong to the class)
+	
+//	When a class (Customer) extends and abstract class(BaseEntity), then it must override all abstract methods
+
 	private String name;
 	private String city;
 	private double balance;
 	private AccountType accountType;
 	private String category;
-	
+		
 //	Constructors are used to initialize instance variables.
 	public Customer(int id, String name, String city, int balance, AccountType accountType) {
 		this.id = id;
