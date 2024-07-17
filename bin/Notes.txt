@@ -1,0 +1,14 @@
+Classes and objects
+
+- Overriding and overloading
+- Polymorphism
+- Heap and Stack
+- Keywords: final, static and abstract
+- Interface: Lambda exp
+- Streams API
+
+Databases
+
+Hibernate and JPA
+
+Spring core, MVC and Boot, Microservices
