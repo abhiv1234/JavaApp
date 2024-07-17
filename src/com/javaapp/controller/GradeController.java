@@ -2,9 +2,10 @@ package com.javaapp.controller;
 
 import java.util.Scanner;
 
+import com.javaapp.exceptions.IllegalMarksException;
 import com.javaapp.service.GradeService;
 
-public class GradeComputer {
+public class GradeController {
 	
 	public static void main(String[] args) {
 
@@ -24,12 +25,20 @@ public class GradeComputer {
 		GradeService gradeService = new GradeService();
 		
 //		Give inputs given by the user to service
-		String grade = gradeService.computeGrade(marks1, marks2, marks3, totalMarks);
-		
 //		service must do the required processing and return the grade
 		
 //		once get the grade, display it
-		System.out.println("Your grade is: " + grade);
+
+			try {
+				String grade = gradeService.computeGrade(marks1, marks2, marks3, totalMarks);
+				System.out.println("Your grade is: " + grade);
+			} catch (IllegalMarksException e) {
+				System.out.println(e.getMessage());
+			}
+		
+		
+		
+		System.out.println("Thankyou....");
 	}
 }
 
