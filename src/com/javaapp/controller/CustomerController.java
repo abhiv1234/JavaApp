@@ -15,7 +15,7 @@ public class CustomerController {
 		
 		customerService.computeCustomerCategory(c2);
 		
-//		System.out.println("Category: "+c1.getCategory());
+		System.out.println("Category: "+c1.getCategory());
 		System.out.println("Category: "+c2.getCategory());
 		System.out.println(c2);
 	}
