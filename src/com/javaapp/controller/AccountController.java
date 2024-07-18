@@ -1,6 +1,9 @@
 package com.javaapp.controller;
 
 import com.javaapp.enums.AccountType;
+import com.javaapp.exceptions.IllegalAmountException;
+import com.javaapp.exceptions.InsufficientFundsException;
+import com.javaapp.exceptions.OverTheLimitException;
 import com.javaapp.model.Account;
 import com.javaapp.model.AccountHolder;
 import com.javaapp.service.AccountService;
@@ -21,7 +24,11 @@ public class AccountController {
 		accountService.deposit(accountHolder, 2000);
 		System.out.println(accountHolder);
 		System.out.println("******After Withdrawal******");
-		accountService.withdrawal(accountHolder, 3000);
+		try {
+			accountService.withdrawal(accountHolder, 7000);
+		} catch (InsufficientFundsException | OverTheLimitException | IllegalAmountException e) {
+			System.out.println(e.getClass() + " : "+ e.getMessage());
+		}
 		System.out.println(accountHolder);
 	}
 
