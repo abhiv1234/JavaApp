@@ -54,8 +54,9 @@ public class ProductController {
 			case 3:
 				Product product = new Product();
 				System.out.println("Enter product title: ");
-				product.setTitle(sc.nextLine());
+				product.setTitle(sc.next());
 				System.out.println("Enter price: ");
+		
 				product.setPrice(sc.nextDouble());
 				System.out.println("Enter product description: ");
 				product.setDescription(sc.nextLine());
